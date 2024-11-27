@@ -2,7 +2,7 @@
     font-family: Poppins;
     font-size: 21px;
     font-weight: 500;
-    min-width: 250px;
+    max-width: 250px;
     width: 100%;
     border: 1.5px solid #EDF5FE;
     padding-top: 30px;
