@@ -1,0 +1,16 @@
+.input-field {
+    gap: 3px;
+}
+
+.input-field label{
+    color: #0C1421;
+    font-size: 15px;
+}
+
+.input-field input {
+    border-radius: 10px;
+    border: 1px solid #00000066;
+    background: #FFFFFF;
+    font-family: Poppins;
+    padding: 10px
+}

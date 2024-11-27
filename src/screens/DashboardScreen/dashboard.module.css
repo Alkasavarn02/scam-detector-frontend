@@ -1,0 +1,105 @@
+.dashboard-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+}
+
+.main-section {
+    width: 100%;
+    height: calc(100% - 115px);
+}
+
+.sidebar {
+    height: 100%;
+}
+
+.render-screen {
+    width: calc(100% - 250px);
+    height: 100%;
+    padding: 45px;
+    background-color: #F9F9F9;
+}
+
+.render-screen .welcome-text {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.render-screen > p, .render-screen .welcome-text {
+    width: 700px;
+    text-align: center;
+}
+
+.dropdown-section {
+    margin-bottom: 10px;
+}
+
+.filter-dropdown{
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.table-section {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+.table-section th, .table-section td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table-section th {
+    background-color: #f4f4f4;
+}
+
+.arrow-section {
+    margin-left: 10px;
+}
+
+.pagination {
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.pagination button:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination .active {
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+}
+
+@media (max-width: 768px){
+    .render-screen{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
+
+
+
+
+
+

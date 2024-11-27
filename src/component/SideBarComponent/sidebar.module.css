@@ -1,0 +1,58 @@
+.side-bar{
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 500;
+    min-width: 250px;
+    width: 100%;
+    border: 1.5px solid #EDF5FE;
+    padding-top: 30px;
+    position: relative;
+    color:#0C1421;
+}
+
+.scam-lookup:hover, .report-scam:hover, .scam-reports-table:hover, .logout:hover  {
+    background-color: #4391ED1A;
+    cursor: pointer;
+}
+
+.scam-lookup, .report-scam, .scam-reports-table, .logout {
+    padding: 14px;
+}
+
+.logout {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    .side-bar{
+        text-align: center;
+    }
+    .scam-lookup, .report-scam, .scam-reports-table, .logout {
+        padding: 8px;
+    }
+    .logout {
+        position: absolute;
+        bottom: 100px;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
