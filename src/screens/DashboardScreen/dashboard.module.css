@@ -95,7 +95,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
-
+    .render-screen > p, .render-screen .welcome-text {
+        width: 400px;
+        text-align: center;
+    }
 }
 
 
