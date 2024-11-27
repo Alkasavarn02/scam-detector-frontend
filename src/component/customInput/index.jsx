@@ -1,5 +1,5 @@
 import { memo } from "react";
-import styles from "./Input.module.css"
+import styles from "./input.module.css"
 
 const InputField = ({label, type, placeholder, name, value, onChange})=> {
     return (
