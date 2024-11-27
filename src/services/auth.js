@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const login = async(data)=>{
-    const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/login`, data ,{
+    const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/v1/login`, data ,{
         headers: {
             'Content-Type': "application/x-www-form-urlencoded",
         }
@@ -10,7 +10,7 @@ export const login = async(data)=>{
 }
 
 export const addReportScam = async(data) => {
-    const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/report-scam`, data , {
+    const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/v1/report-scam`, data , {
         headers: {
             'Content-Type': "application/x-www-form-urlencoded",
             "Authorization" : `Bearer ${localStorage.getItem("token")}`
@@ -21,7 +21,7 @@ export const addReportScam = async(data) => {
 };
 
 export const getScamStatus = async(data) => {
-    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/scam-status?value=${encodeURIComponent(data)}`, {
+    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/scam-status?value=${encodeURIComponent(data)}`, {
         headers: {
             'Content-Type': "application/x-www-form-urlencoded",
             "Authorization" : `Bearer ${localStorage.getItem("token")}`
@@ -32,7 +32,7 @@ export const getScamStatus = async(data) => {
 };
 
 export const getAllData = async() => {
-    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/scam-list`, {
+    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/scam-list`, {
         headers: {
             'Content-Type': "application/x-www-form-urlencoded",
             "Authorization" : `Bearer ${localStorage.getItem("token")}`
