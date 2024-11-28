@@ -20,9 +20,9 @@ header {
 
 @media (max-width: 480px){
     .title {
-        font-size: 23px;
+        font-size: 31px;
     }
     .back-arrow{
-        top: 40px;
+        top: 75px;
     }
 }
