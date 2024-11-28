@@ -16,14 +16,24 @@ const DashboardScreen = ({screen}) => {
         data: [],
     })
 
-    useEffect(()=>{
-        getAllData()
-        .then((res)=>{
+    useEffect(() => {
+        const savedFilter = localStorage.getItem("filter") || "All";
+        const savedSortOrder = localStorage.getItem("sortOrder") || "asc";
+        const savedData = JSON.parse(localStorage.getItem("sortedData"));
+    
+        if (savedData) {
+          setAllData({ data: savedData });
+          setSortOrder(savedSortOrder);
+          setFilter(savedFilter);
+        } else {
+          getAllData().then((res) => {
             setAllData({
-                data: res?.data?.data,
-            })
-        })
-    },[])
+              data: res?.data?.data,
+            });
+            localStorage.setItem("sortedData", JSON.stringify(res?.data?.data)); // Save initial data
+          });
+        }
+      }, []);
 
     const filteredData = (filter === "All")
         ? alldata?.data 
@@ -51,6 +61,9 @@ const DashboardScreen = ({screen}) => {
 
         setAllData({data:sortedData})
         setSortOrder(sortOrder === "asc" ? "desc" : "asc")
+
+        localStorage.setItem("sortedData", JSON.stringify(sortedData));
+        localStorage.setItem("sortOrder", sortOrder === "asc" ? "desc" : "asc")
     }
 
     return (
