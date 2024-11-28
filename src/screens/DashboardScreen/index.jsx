@@ -30,10 +30,10 @@ const DashboardScreen = ({screen}) => {
             setAllData({
               data: res?.data?.data,
             });
-            localStorage.setItem("sortedData", JSON.stringify(res?.data?.data)); // Save initial data
+            localStorage.setItem("sortedData", JSON.stringify(res?.data?.data));
           });
         }
-      }, []);
+    }, []);
 
     const filteredData = (filter === "All")
         ? alldata?.data 
@@ -49,6 +49,13 @@ const DashboardScreen = ({screen}) => {
             setCurrentPage(page);
         }
     };
+
+    const handleFilterChange = (e) => {
+        const selectedFilter = e.target.value
+        setFilter(selectedFilter)
+        setCurrentPage(1)
+        localStorage.setItem("filter", selectedFilter);
+    }
 
     const handleSort = ()=>{
         const sortedData = [...alldata.data].sort((a,b)=>{
@@ -87,10 +94,7 @@ const DashboardScreen = ({screen}) => {
                                         className={`${styles['filter-dropdown']}`}
                                         id="filterDropdown"
                                         value={filter}
-                                        onChange={(e) => {
-                                            setFilter(e.target.value);
-                                            setCurrentPage(1); 
-                                        }}
+                                        onChange={handleFilterChange}
                                     >
                                         <option value="All">All</option>
                                         <option value="Phone">Phone</option>
