@@ -1,0 +1,28 @@
+header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.sub-title {
+    font-size: 16px;
+}
+
+.back-arrow{
+    position: absolute;
+    left: 20px;
+    top: 45px;
+}
+
+@media (max-width: 480px){
+    .title {
+        font-size: 23px;
+    }
+    .back-arrow{
+        top: 40px;
+    }
+}
