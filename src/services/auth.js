@@ -32,7 +32,7 @@ export const getScamStatus = async(data) => {
 };
 
 export const getAllData = async() => {
-    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/scam-list`, {
+    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/scam-list`, {
         headers: {
             'Content-Type': "application/x-www-form-urlencoded",
             "Authorization" : `Bearer ${localStorage.getItem("token")}`
