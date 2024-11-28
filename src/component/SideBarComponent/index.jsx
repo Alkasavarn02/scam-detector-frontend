@@ -8,7 +8,7 @@ const LogOutModal = React.lazy(() => import("../../PopUpModal/logoutmodal"));
 
 const ModalFallback = () => <div>Loading...</div>
 
-function SideBar({classes}){
+function NavBar({classes}){
     
     const navigate = useNavigate();
     const [showModal,setShowModal] = useState(null)
@@ -36,12 +36,12 @@ function SideBar({classes}){
     };
     
     return (
-        <div className={`${styles['side-bar']} ${classes || ""}`}>
+        <div className={`d-flex justify-center align-center ${styles['side-bar']} ${classes || ""}`}>
             {
                 sideMenuList.map((menu)=>{
                     const {id,classes,title} = menu || {};
                     return (
-                        <p
+                        <button
                             key={id}
                             className={`${styles[classes]}`}
                             onClick={() => {
@@ -53,7 +53,7 @@ function SideBar({classes}){
                             }}
                         >
                             {title}
-                        </p>
+                        </button>
                     )
                 })
             }
@@ -69,4 +69,4 @@ function SideBar({classes}){
     );
 }
 
-export default memo(SideBar);
+export default memo(NavBar);

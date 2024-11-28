@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from "react";
 import styles from "./dashboard.module.css"
 import { getAllData } from "../../services/auth";
 const CustomHeader = React.lazy(() => import("../../component/customHeader"));
-const SideBar = React.lazy(() => import("../../component/SideBarComponent"));
+const NavBar = React.lazy(() => import("../../component/SideBarComponent"));
 
 const DashboardScreen = ({screen}) => {
 
@@ -60,8 +60,8 @@ const DashboardScreen = ({screen}) => {
                 title="Scam Detection Dashboard"
                 classes={`${styles['header']}`}
             />
-            <div className={`d-flex ${styles['main-section']}`}>
-                <SideBar classes={`${styles['sidebar']}`}/>
+            <div className={`d-flex flex-column ${styles['main-section']}`}>
+                <NavBar classes={`${styles['sidebar']}`}/>
                 
                 <div className={`d-flex flex-column justify-center align-center ${styles['render-screen']}`}>
                     {

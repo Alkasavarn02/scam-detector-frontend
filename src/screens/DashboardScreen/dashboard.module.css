@@ -17,7 +17,7 @@
 }
 
 .render-screen {
-    width: calc(100% - 250px);
+    width: 100%;
     height: 100%;
     padding: 45px;
     background-color: #F9F9F9;
@@ -29,7 +29,8 @@
 }
 
 .render-screen > p, .render-screen .welcome-text {
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     text-align: center;
 }
 
