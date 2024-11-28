@@ -26,25 +26,6 @@
     text-align: center;
 }
 
-@media (max-width: 768px){
-    .side-bar{
-        text-align: center;
-    }
-    .scam-lookup, .report-scam, .scam-reports-table, .logout {
-        padding: 8px;
-    }
-    .logout {
-        position: absolute;
-        bottom: 100px;
-        width: 100%;
-        text-align: center;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px){
-
-}
-
 
 
 

@@ -75,3 +75,13 @@
     margin-top: 10px;
 }
 
+@media (max-width: 480px) {
+    .form-data{
+        width: 355px;
+    }
+    .radio-btn-conatiner {
+        width: 87px;
+    }
+}
+
+
